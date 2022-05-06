@@ -1,6 +1,8 @@
 #Heat maps for test scanning potato plants
 #UMO Genome Elimination Lab - Schoodic Institute at Acadia National Park
-#Kyle Lima 2021
+#Kyle Lima 2022
+
+
 
 #------------------------------------------------#
 ####           Packages Required              ####
@@ -9,8 +11,6 @@
 library(spectrolab)
 library(gplots)
 library(vegan)
-
-select <- dplyr::select
 
 
 
@@ -38,6 +38,8 @@ lamoka_single = read_spectra(path = 'data/pvy_scan_20220429/lamoka_single')
 ####              Heat map viz                ####
 #------------------------------------------------#
 
+##Uncomment and run this pdf function and the connected dev.off function at the 
+##bottom of this script to produce a pdf output of the following heat maps
 #pdf(file = "outputs/heatmaps_20220501.pdf", height = 7.6, width = 10.9)
 
 ##Heat maps for the first round data
@@ -184,6 +186,6 @@ heatmap.2(as.matrix(decostand(lamoka_single, "standardize", MARGIN = 2)),
           margins = c(5,10))
 
 
-
+##Uncomment to make pdf output
 #dev.off()
 
