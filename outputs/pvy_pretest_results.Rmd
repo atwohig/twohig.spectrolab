@@ -1,0 +1,74 @@
+---
+title: "Potato Vrius Y PCA & PLS-DA Results"
+author: "Kyle Lima"
+date: '2022-06-20'
+output: 
+  html_document:
+    theme: readable
+---
+
+```{r setup, include = F}
+
+library(png)
+library(jpeg)
+library(magick)
+
+
+```
+
+# PCA Figures
+
+### Strain
+```{r, echo = F}
+image_read(readPNG("pca_strain.png"))
+```
+
+### Leaf Type
+```{r, echo = F}
+image_read(readPNG("pca_leaf_type.png"))
+```
+
+### Scan Number
+```{r, echo = F}
+image_read(readPNG("pca_scan_type.png"))
+```
+<br>
+<br>
+
+# PLS-DA Confusion Matrices
+
+### Strain with all leaves
+```{r, echo = F}
+image_read(readJPEG("strain_cm.jpeg"))
+```
+<br>
+
+### Strain with only lower leaves
+```{r, echo = F}
+image_read(readJPEG("strain_lower_cm.jpeg"))
+```
+<br>
+
+### Strain with only middle leaves
+```{r, echo = F}
+image_read(readJPEG("strain_middle_cm.jpeg"))
+```
+<br>
+
+### Strain with only upper leaves
+```{r, echo = F}
+image_read(readJPEG("strain_upper_cm.jpeg"))
+```
+<br>
+
+### Leaf Type
+```{r, echo = F}
+image_read(readJPEG("leaf_type_cm.jpeg"))
+```
+<br>
+
+### Scan Type (single vs. multiple/spot)
+```{r, echo = F}
+image_read(readJPEG("scan_type_cm.jpeg"))
+```
+<br>
