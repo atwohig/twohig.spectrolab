@@ -21,7 +21,7 @@ generatePLSData <- readRDS('functions/generatePLSData.rds')
 #------------------------------------------------#
 
 #Run PLS-DA for Strain with data from all leaf types
-generatePLSData(spectra = spectra_all, className = 'strain', includeAge = F,
+generatePLSData(spectra = spectra_all, className = 'strain', includeAge = FALSE,
                 ncomps = 2, numIterations = 100, baseDirectory = 'outputs/plsda')
 
 
