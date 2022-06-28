@@ -1,4 +1,4 @@
-#PLS-DA script
+#PLS-DA for our different hypotheses
 #Schoodic Institute at Acadia National Park - University of Maine Haploid Genomics Lab 
 #Kyle Lima, Peter Nelson 
 #June, 2022
@@ -11,10 +11,11 @@
 spectra_all <- readRDS("data/processed/clean_all.rds")
 
 #Call the package/function
-generatePLSData <- readRDS('functions/generatePLSData.rds')
+#generatePLSData <- readRDS('functions/generatePLSData.rds')
+source("functions/generatePLSDA.R")
 
 
-
+spectra_all <- as.data.frame(spectra_all)
 
 #------------------------------------------------#
 ####            PLS-DA Strain All             ####
@@ -22,8 +23,8 @@ generatePLSData <- readRDS('functions/generatePLSData.rds')
 
 #Run PLS-DA for Strain with data from all leaf types
 generatePLSData(spectra = spectra_all, className = 'strain', includeAge = FALSE,
-                ncomps = 2, numIterations = 100, baseDirectory = 'outputs/plsda')
-
+                ncomps = 2, numIterations = 3, baseDirectory = 'test')
+'outputs/plsda'
 
 
 

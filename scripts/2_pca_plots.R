@@ -1,5 +1,5 @@
 #Running PCA on spectra groups to examine visually 
-#Schoodic Institute at Acadia National Park - Univsersity of Maine Haploid Genomics Lab 
+#Schoodic Institute at Acadia National Park - University of Maine Haploid Genomics Lab 
 #Kyle Lima, Peter Nelson 
 #June, 2022
 
